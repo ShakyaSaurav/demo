@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-desc1 p.people{
+            color: #3f51b5;
+        }
+
+        .hide{
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn-1" data-target="hello1">
+        click me1
+    </a>
+    <button id="btn-2" data-target="hello2">
+        click me2
+    </button>
+    <button id="btn-3" data-target="hello3">
+        click me3
+    </button>
+
+    <div class="btn-desc1" id="hello1">
+       <p class="people">hello world1</p>
+    </div>
+    <div class="btn-desc2" id="hello2">
+        <p class="people">hello world2</p>
+     </div> 
+     <div class="btn-desc1" id="hello3">
+        <p class="people2">hello world3</p>
+     </div>
+
+     <script>
+         var x1 = document.getElementById("btn-1");
+         var x2 = document.getElementById("btn-2");
+         var x3 = document.getElementById("btn-3");
+         x1.addEventListener("click", click1);
+         x2.addEventListener("click", click2);
+         x3.addEventListener("click", click3);         
+        function click1(e) {
+            e.preventDefault();
+            console.log(e);
+             y=document.querySelectorAll(".btn-desc1 p.people");
+            y.forEach(a => {
+              if (a.style.display === "none") {
+                 a.style.display = "block";
+                } else {
+                    a.style.display = "none";
+                }
+            });
+        }   
+        function click2(){
+            y=document.querySelectorAll(".btn-desc2");
+            y.forEach(a => {
+                if (a.style.display ==="none"){
+                    a.style.display="block";
+                }else{
+                    a.style.display="none";
+                }
+            });
+        }   
+            function click3(){
+                y=document.querySelectorAll(".btn-desc1 p.people2");
+                y.forEach(a => {
+                    if (a.style.display ==="none"){
+                    a.style.display="block";
+                }else{
+                    a.style.display="none";
+                }
+                });
+            }
+        
+     </script>
+</body>
+</html>
