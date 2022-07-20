@@ -8,7 +8,18 @@
 </head>
 <body>
     <p id="removal">This is something </p>
-    <button type="button" onclick="document.getElementById('removal').style.display='none'">click this to remove</button>
-    <button type="button" onclick="document.getElementById('removal').style.display='flex'">click this to revive</button>
+    <button type="button" onclick="reverse()">click to reverse</button>
+    <script>
+        function reverse(){
+            if(document.getElementById("removal").style.display="flex")
+            {
+                document.getElementById("removal").style.display='none'
+            }
+            else
+            {
+                document.getElementById("removal").style.display='flex'
+            }
+        }
+    </script>
 </body>
 </html>
