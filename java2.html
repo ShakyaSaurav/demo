@@ -11,13 +11,16 @@
     <button type="button" onclick="reverse()">click to reverse</button>
     <script>
         function reverse(){
-            if(document.getElementById("removal").style.display="flex")
+            console.log(document.getElementById("removal").style);
+            if(document.getElementById("removal").style.display=="")
             {
-                document.getElementById("removal").style.display='none'
+                document.getElementById("removal").style.display='none';
+                console.log('here');
             }
-            else
+            else if(document.getElementById("removal").style.display=='none')
             {
-                document.getElementById("removal").style.display='flex'
+                document.getElementById("removal").style.display='';
+                console.log('there');
             }
         }
     </script>
