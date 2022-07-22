@@ -9,9 +9,15 @@
 <body>
     <p>learning string stuff</p>
     <p id="stringManu"></p>
+    <button onclick="swapping()">swap content here :)</button>
+    <p id='sliceString' >i like apples. Apples dont taste like apples. good apples</p>
 <script>
     let str='cool boy out here';
     document.getElementById('stringManu').innerHTML= str.slice(5,8);
+    function swapping(){
+        let text= document.getElementById('sliceString').innerHTML;
+        document.getElementById('sliceString').innerHTML= text.replace(/apple/g,"banana");
+    }
 </script>
 </body>
 </html>
