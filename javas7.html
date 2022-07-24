@@ -10,8 +10,11 @@
     <p id="stringIndex">
     </p>
     <script>
-        str="what is location of 'location'?";
+        str="what is location of 'locATion'?";
         document.getElementById('stringIndex').innerHTML= str.indexOf('is');
+        document.getElementById('stringIndex').innerHTML= str.match(/at/g);
+        document.getElementById('stringIndex').innerHTML= str.match(/at/gi);
+        document.getElementById("stringIndex").innerHTML = str.includes("what");
         // -1 aaucha if not found
     </script>
 </body>
